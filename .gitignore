@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.pipenv/
+
+# macOS specific
+.DS_Store
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Test & Debug
+*.swp
+*.swo
+*.bak
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Compiled C extensions
+*.so
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.jpg
+*.jpeg
+*.png
+
+# Streamlit cache
+.streamlit/
+
+# VS Code settings
+.vscode/
+
+# Output
+output/
