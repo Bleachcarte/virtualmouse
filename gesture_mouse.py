@@ -66,8 +66,8 @@ while True:
     h, w, c = frame.shape
     frame_h, frame_w, _ = frame.shape
     # Set margins (tune these values based on your camera and comfort)
-    margin_x = 100
-    margin_y = 100
+    margin_x = 25
+    margin_y = 25
 
     # Define active region
     active_left = margin_x
@@ -248,32 +248,32 @@ while True:
 
 
             
-           # Gesture: 3-Finger Spread → Next Desktop
-            three_finger_spread = (
-                distance((lix, liy), (lmx, lmy)) > 50 and
-                distance((lix, liy), (lpx, lpy)) > 50 and
-                distance((lmx, lmy), (lpx, lpy)) > 50 and
-                lry > left_hand.landmark[14].y * h and
-                lpy > left_hand.landmark[18].y * h
-            )
+        #    # Gesture: 3-Finger Spread → Next Desktop
+        #     three_finger_spread = (
+        #         distance((lix, liy), (lmx, lmy)) > 50 and
+        #         distance((lix, liy), (lpx, lpy)) > 50 and
+        #         distance((lmx, lmy), (lpx, lpy)) > 50 and
+        #         lry > left_hand.landmark[14].y * h and
+        #         lpy > left_hand.landmark[18].y * h
+        #     )
 
-            if three_finger_spread and time.time() - last_click_time > click_cooldown:
-                pyautogui.hotkey('ctrl', 'right')
-                last_click_time = time.time()
-                cv2.putText(frame, 'Next Desktop', (lix, liy), cv2.FONT_HERSHEY_SIMPLEX, 1, (150, 255, 255), 2)
-            # Gesture: 3-Finger Pinch → Previous Desktop
-            three_finger_pinch = (
-                distance((lix, liy), (lmx, lmy)) < 30 and
-                distance((lix, liy), (lpx, lpy)) < 30 and
-                distance((lmx, lmy), (lpx, lpy)) < 30 and
-                lry > left_hand.landmark[14].y * h and
-                lpy > left_hand.landmark[18].y * h
-            )
+        #     if three_finger_spread and time.time() - last_click_time > click_cooldown:
+        #         pyautogui.hotkey('ctrl', 'right')
+        #         last_click_time = time.time()
+        #         cv2.putText(frame, 'Next Desktop', (lix, liy), cv2.FONT_HERSHEY_SIMPLEX, 1, (150, 255, 255), 2)
+        #     # Gesture: 3-Finger Pinch → Previous Desktop
+        #     three_finger_pinch = (
+        #         distance((lix, liy), (lmx, lmy)) < 30 and
+        #         distance((lix, liy), (lpx, lpy)) < 30 and
+        #         distance((lmx, lmy), (lpx, lpy)) < 30 and
+        #         lry > left_hand.landmark[14].y * h and
+        #         lpy > left_hand.landmark[18].y * h
+        #     )
 
-            if three_finger_pinch and time.time() - last_click_time > click_cooldown:
-                pyautogui.hotkey('ctrl', 'left')
-                last_click_time = time.time()
-                cv2.putText(frame, 'Prev Desktop', (lix, liy), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 200, 150), 2)
+        #     if three_finger_pinch and time.time() - last_click_time > click_cooldown:
+        #         pyautogui.hotkey('ctrl', 'left')
+        #         last_click_time = time.time()
+        #         cv2.putText(frame, 'Prev Desktop', (lix, liy), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 200, 150), 2)
 
 
      # Show frame

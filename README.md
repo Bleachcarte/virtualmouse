@@ -62,10 +62,9 @@ Make sure:
 
 ---
 
-### 🗅️ Screenshots
-
-> *(Optional)*  
-> Add screenshots or GIFs showing gestures and on-screen actions for a visual demo.
+### 🗅️ Recordings
+![Demo](demo.gif) 
+> [Demo](demo.gif)
 
 ---
 
