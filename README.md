@@ -62,9 +62,9 @@ Make sure:
 
 ---
 
-### 🗅️ Recordings
+### 🗅️ Recordings"
 ![Demo](demo.gif) 
-> [Demo](demo.gif)
+> (demo.gif)
 
 ---
 
